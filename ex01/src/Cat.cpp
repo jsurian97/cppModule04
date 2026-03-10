@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 13:58:26 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 17:39:55 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 18:19:15 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ Cat& Cat::operator= (const Cat& source)
 {
 	std::cout << "Copy assignement operator Cat called" << std::endl;
 	this->_type = source._type;
-	this->_CatBrain = source._CatBrain;
+	delete this->_CatBrain;
+	this->_CatBrain = new Brain(*source._CatBrain);
 	return *this;
 }
 

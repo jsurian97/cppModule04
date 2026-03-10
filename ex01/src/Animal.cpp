@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 12:34:56 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 17:44:39 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 17:59:12 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,14 @@ std::string	Animal::getType(void) const
 void	Animal::makeSound(void) const
 {
 	std::cout << "Animal sound" << std::endl;
+}
+
+void	Animal::setBrain(std::string idea, int i)
+{
+	(void)idea;
+	(void)i;
+}
+
+void	Animal::printIdeas()
+{
 }

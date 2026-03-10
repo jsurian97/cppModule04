@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 14:06:34 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 17:41:18 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 18:33:19 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,21 @@ int	main()
 			array[i] = new Dog;
 		i++;
 	}
-	i = 0;
-	array[0]->setBrain("idea0", 0);
-	array[0]->setBrain("idea1", 1);
-	array[0]->setBrain("idea2", 2);
-	array[0]->setBrain("idea3", 3);
-	array[0]->printIdeas();
 	while (i < sizeArray)
 	{
 		delete array[i];
 		i++;
 	}
+	Cat a;
+	Cat b;
+	a.setBrain("idea0", 0);
+	a.setBrain("idea1", 1);
+	a.setBrain("idea2", 2);
+	a.setBrain("idea3", 3);
+	a.printIdeas();
+	b = a;
+	b.setBrain("changement", 0);
+	a.printIdeas();
+	b.printIdeas();
 	return (0);
 }

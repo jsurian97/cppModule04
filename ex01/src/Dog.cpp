@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 12:40:47 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 17:00:35 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 18:19:38 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ Dog& Dog::operator= (const Dog& source)
 {
 	std::cout << "Copy assignment operator Dog called" << std::endl;
 	this->_type = source._type;
-	this->_DogBrain = source._DogBrain;
+	delete this->_DogBrain;
+	this->_DogBrain = new Brain(*source._DogBrain);
 	return *this;
 }
 

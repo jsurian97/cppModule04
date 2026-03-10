@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 12:32:17 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 15:29:37 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 17:43:55 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class	Animal
 
 		std::string	getType(void) const;
 		virtual void	makeSound(void) const;
+		virtual void	setBrain(std::string idea, int i);
+		virtual void	printIdeas();
 };
 
 #endif

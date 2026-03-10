@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 16:15:38 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 17:02:18 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 17:31:41 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class	Brain
 		Brain(const Brain& source);
 		~Brain();
 		Brain& operator= (const Brain& source);
+		void	printAllIdeas();
+		void	setIdeas(std::string idea, int i);
 };
 
 #endif

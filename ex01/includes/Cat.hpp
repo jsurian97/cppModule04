@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 13:55:57 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 16:21:17 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 17:39:06 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class	Cat : public Animal
 		Cat& operator= (const Cat& source);
 
 		void	makeSound(void) const;
+		void	setBrain(std::string idea, int i);
+		void	printIdeas();
 };
 
 #endif

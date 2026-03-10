@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 16:36:24 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 17:03:36 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 17:34:34 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,16 @@ Brain& Brain::operator= (const Brain& source)
 	for (int i = 0; i < 100; i++)
 		this->_ideas[i] = source._ideas[i];
 	return *this;
+}
+
+void	Brain::printAllIdeas()
+{
+	for(int i = 0; i < 100; i++)
+		std::cout << "idea number " << i << ": " << this->_ideas << std::endl;
+}
+
+void	Brain::setIdeas(std::string idea, int i)
+{
+	if (i < 100 && i >= 0)
+		this->_ideas[i] = idea;
 }

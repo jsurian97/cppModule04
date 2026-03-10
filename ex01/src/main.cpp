@@ -6,7 +6,7 @@
 /*   By: jsurian42 <jsurian@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 14:06:34 by jsurian42         #+#    #+#             */
-/*   Updated: 2026/03/10 16:57:13 by jsurian42        ###   ########.fr       */
+/*   Updated: 2026/03/10 16:28:37 by jsurian42        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,29 @@
 
 int	main()
 {
-	const Animal*	meta = new Animal();
-	const Animal*	i = new Cat();
-	const Animal*	j = new Dog();
+//	const Animal*	i = new Cat();
+//	const Animal*	j = new Dog();
+//
+//	delete(j);
+//	delete(i);
 
-//	const WrongAnimal*	meta = new WrongAnimal();
-//	const WrongAnimal*	i = new WrongCat();
+	int sizeArray = 4;
+	int	i = 0;
+	Animal* array[sizeArray];
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-
-	delete(meta);
-	delete(j);
-	delete(i);
+	while (i < sizeArray)
+	{
+		if (i % 2 == 0)
+			array[i] = new Cat;
+		else
+			array[i] = new Dog;
+		i++;
+	}
+	i = 0;
+	while (i < sizeArray)
+	{
+		delete array[i];
+		i++;
+	}
 	return (0);
 }
